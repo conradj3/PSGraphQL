@@ -12,7 +12,7 @@ jobs:
       run: Import-Module -Name Pester -Version 4.10.1 -Force
     - name: Run Pester tests
       shell: pwsh
-      run: Invoke-Pester -OutputFormat NUnitXml -OutputFile test-results.xml
+      run: Invoke-Pester
     - name: Publish to PowerShell Gallery
       if: success()
       shell: pwsh

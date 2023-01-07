@@ -4,7 +4,7 @@
 $myDefaultDirectory = Get-Location
 
 Set-Location -Path $myDefaultDirectory
-Set-Location -Path ..
+Set-Location -Path ..\..
 
 $module = "PSGraphQL"
 

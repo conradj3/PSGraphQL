@@ -7,14 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up PowerShell
-      uses: actions/setup-powershell@v2
-      with:
-        version: 7.1.0
     - name: Install Pester
-      run: pwsh -c "Install-Module Pester -Force"
+      shell: pwsh
+      run: Install-Module Pester -Force
     - name: Run Pester tests
-      run: pwsh -c "Invoke-Pester -OutputFormat NUnitXml -OutputFile test-results.xml"
+      shell: pwsh
+      run: Invoke-Pester -OutputFormat NUnitXml -OutputFile test-results.xml"
     - name: Publish to PowerShell Gallery
       if: success()
-      run: pwsh -c "Publish-Module -Name 'MyModule' -NuGetApiKey '${{ secrets.PSGALLERY_TOKEN }}'"
+      shell: pwsh
+      run: Publish-Module -Name 'MyModule' -NuGetApiKey '${{ secrets.PSGALLERY_TOKEN }}'

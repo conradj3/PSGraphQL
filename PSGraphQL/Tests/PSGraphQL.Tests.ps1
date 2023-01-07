@@ -10,8 +10,6 @@ $moduleDirectory = Resolve-Path "..\$module"
 # Print the full path of the module directory
 Write-Output $moduleDirectory
 
-Clear-Host
-
 
 Describe "$module Module Structure and Validation Tests" -Tag Linting -WarningAction SilentlyContinue {
     Context "$module" {

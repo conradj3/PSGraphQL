@@ -16,4 +16,4 @@ jobs:
     - name: Publish to PowerShell Gallery
       if: success()
       shell: pwsh
-      run: Publish-Module -Name 'TestPubGQL' -NuGetApiKey '${{ secrets.PSGALLERY_TOKEN }}'
+      run: Publish-Module -Name 'PSGraphQL' -NuGetApiKey '${{ secrets.PSGALLERY_TOKEN }}'

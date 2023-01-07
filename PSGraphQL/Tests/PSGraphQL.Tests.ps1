@@ -5,11 +5,7 @@
 $module = "PSGraphQL"
 
 # Get the full path of the module directory
-$moduleDirectory = Resolve-Path "$(Split-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) -Parent)..\$module"
-
-# Print the full path of the module directory
-Write-Output $moduleDirectory
-
+$moduleDirectory = Resolve-Path -Path "$PSScriptRoot\..\..\$module"
 
 Describe "$module Module Structure and Validation Tests" -Tag Linting -WarningAction SilentlyContinue {
     Context "$module" {

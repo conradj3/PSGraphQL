@@ -5,7 +5,7 @@
 $module = "PSGraphQL"
 
 # Get the full path of the module directory
-$moduleDirectory = Resolve-Path "$(Split-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) -Parent)..\..\$module"
+$moduleDirectory = Resolve-Path "$(Split-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) -Parent)..\$module"
 
 # Print the full path of the module directory
 Write-Output $moduleDirectory

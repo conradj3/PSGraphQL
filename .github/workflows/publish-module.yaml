@@ -12,8 +12,8 @@ jobs:
       run: Install-Module Pester -Force
     - name: Run Pester tests
       shell: pwsh
-      run: Invoke-Pester -OutputFormat NUnitXml -OutputFile test-results.xml"
+      run: Invoke-Pester -OutputFormat NUnitXml -OutputFile test-results.xml
     - name: Publish to PowerShell Gallery
       if: success()
       shell: pwsh
-      run: Publish-Module -Name 'MyModule' -NuGetApiKey '${{ secrets.PSGALLERY_TOKEN }}'
+      run: Publish-Module -Name 'PSGraphTest' -NuGetApiKey '${{ secrets.PSGALLERY_TOKEN }}'

@@ -14,7 +14,7 @@ jobs:
         id: test_module
         uses: zyborg/pester-tests-report@v1
         with:
-          include_paths: ./PSGraphQL/Tests
+          include_paths: ./Tests
           report_name: module_tests
           report_title: My Module Tests
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,16 +1,17 @@
 #Requires -Modules @{ModuleName="Pester";ModuleVersion="4.10.1"}
 #requires -Module PSScriptAnalyzer
 
-$myDefaultDirectory = Get-Location
-
-Set-Location -Path $myDefaultDirectory
-Set-Location -Path ..\..
-
+# Set the name of the module
 $module = "PSGraphQL"
 
-$moduleDirectory = Get-Item -Path $myDefaultDirectory | Select-Object -ExpandProperty FullName
+# Get the full path of the module directory
+$moduleDirectory = Resolve-Path "..\..\$module"
+
+# Print the full path of the module directory
+Write-Output $moduleDirectory
 
 Clear-Host
+
 
 Describe "$module Module Structure and Validation Tests" -Tag Linting -WarningAction SilentlyContinue {
     Context "$module" {

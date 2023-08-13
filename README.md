@@ -1,4 +1,4 @@
-# PSGraphQL
+# PSGraphQL !
 This PowerShell module contains functions that facilitate query and mutation operations against GraphQL endpoints.
 
 ### Tested on
